@@ -1,0 +1,20 @@
+<div class="editor">
+    <form >
+        <!--div class="editor-place" contenteditable="true" ng-style="height: height"></div -->
+        <div class="form-group">
+            <textarea  ng-show="!isRender" class="editor-place form-control" style="height: {{height}}px" ng-model="edittext"></textarea>
+
+                <div  ng-show="isRender" class="editor-render-place" style="height: {{height}}px">
+                    <div  scroll="{{height}}">
+                        <div  class="editor-render-place-html" ng-bind-html="editedtext"></div>
+                    </div>
+                </div>
+
+        </div>
+
+        <button class="btn-default btn" ng-if="!isRender" ng-click="render(1)">Render</button>
+        <button class="btn-default btn" ng-if="isRender" ng-click="render(0)">Edit</button>
+        <button class="btn-primary btn pull-right" ng-click="save()">Save</button>
+    </form>
+
+</div>

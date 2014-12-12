@@ -1,0 +1,42 @@
+@import "../../bower_components/bootstrap/less/bootstrap";
+@import "lesshat";
+@import "common";
+
+
+@grey     : #ebebeb;
+@white    : #fff;
+@yellow   : #fcfcfc;
+@font-color  : #000;
+
+body {
+  font-family: 'arial';
+  color: @font-color;
+}
+.editor {
+  .editor-place {
+    padding: 20px;
+
+    .size(100%,300px);
+    .background-image(linear-gradient(@yellow 50%, transparent 50%));
+    .background-size(100%, 4em);
+    .background-origin(content-box);
+    background-color: @white;
+    line-height: 2em;
+    font-size: 12px;
+    border: @grey  solid 1px;
+  }
+  .editor-render-place {
+
+    background-color: @white;
+    line-height: 2em;
+    font-size: 12px;
+    border: @grey  solid 1px;
+    .size(100%,300px);
+    display: block;
+
+    .editor-render-place-html {
+      padding: 20px;
+    }
+  }
+}
+
